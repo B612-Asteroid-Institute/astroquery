@@ -7,6 +7,7 @@ __all__ = ['NEODyS', 'NEODySClass']
 
 
 class NEODySClass():
+
     NEODYS_URL = conf.server
     TIMEOUT = conf.timeout
 
@@ -63,5 +64,6 @@ class NEODySClass():
         Results["NOR"] = NOR
 
         return Results
+
 
 NEODyS = NEODySClass()

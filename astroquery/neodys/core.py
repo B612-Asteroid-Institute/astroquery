@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 from . import conf
 
-__all__ = ['NEODyS', 'NEODySClass']  
+__all__ = ['NEODyS', 'NEODySClass']
 
 
 class NEODySClass():
@@ -13,7 +13,7 @@ class NEODySClass():
     def __init__(self):
         super(NEODySClass, self).__init__()
 
-    def query_object(self, Object_ID, OrbitElementType = "Keplerian", Epoch = "Near_Middle"):
+    def query_object(self, Object_ID, OrbitElementType="Keplerian", Epoch="Near_Middle"):
 
         COV = []
         COR = []
@@ -35,7 +35,7 @@ class NEODySClass():
                 print("Epoch must be Near_Middle or Near_Present")
         else:
             print("OrbitElementType must be Keplerian or Equinoctial")
-            
+
         html_out = requests.get(Object_url)
         html_text = (html_out.text).split('\n')
 
@@ -63,7 +63,5 @@ class NEODySClass():
         Results["NOR"] = NOR
 
         return Results
-
-
 
 NEODyS = NEODySClass()

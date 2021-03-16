@@ -5,7 +5,7 @@ NEODyS Query Tool
 
 :Author: B612 Foundation ()
 
-This package is for querying 
+This package is for querying NEODys website
 
 """
 from astropy import config as _config

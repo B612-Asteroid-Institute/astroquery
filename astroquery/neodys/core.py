@@ -1,6 +1,5 @@
 
 import requests
-import pandas as pd
 from . import conf
 
 __all__ = ['NEODyS', 'NEODySClass']
